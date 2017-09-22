@@ -93,7 +93,7 @@ body{
     top: 100vh;
     width: 100%;
     padding-top: 50px;
-    padding-bottom: 30vh;
+    padding-bottom: 15vh;
 }
 .header{
     color: #0FDE95;
@@ -116,6 +116,7 @@ body{
     text-align: left;
 }
 .feature-content{
+    padding-top: 20px;
     text-align: left;
     font-size: 1.7vh;
     color: grey;
@@ -148,9 +149,6 @@ body{
 .category>.btn:hover{
     background-color: rgba(11,11,12,0.1);
     border-radius: 6px;
-}
-.img:hover{
-    opacity: 0.3;
 }
 .hovEffectGrow {
     overflow: hidden;
@@ -200,7 +198,7 @@ body{
     -moz-transition: all 0.4s;
     -ms-transition: all 0.4s;
     -o-transition: all 0.4s;
-    transition: all 0.4s; 
+    transition: all 0.4s;
 }
 .hovEffectGrow figcaption {
     position: absolute;
@@ -219,11 +217,11 @@ body{
     -ms-transform: translateY(-50%);;
     -o-transform: translateY(-50%);;
     transform: translateY(-50%);;
-    -webkit-transition: all 0.4s 0.35s;
-    -moz-transition: all 0.4s 0.35s;
-    -ms-transition: all 0.4s 0.35s;
-    -o-transition: all 0.4s 0.35s;
-    transition: all 0.4s 0.35s; 
+    -webkit-transition: all 0.4s 0.1s;
+    -moz-transition: all 0.4s 0.1s;
+    -ms-transition: all 0.4s 0.1s;
+    -o-transition: all 0.4s 0.1s;
+    transition: all 0.4s 0.1s;
 }
 .hovEffectGrow:hover figcaption {
     left: 0;
@@ -268,12 +266,22 @@ body{
     max-width: 100%;
     height: auto;
 }
+
+.blur{
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(px);
+    filter: blur(3px);
+}
 .hovEffectTeam {
+    z-index: 1;
     overflow: hidden;
     position: relative;
     display: inline-block;
     margin: 0;
     margin-left:-4px;
+    background-color: transparent;
 }
 .hovEffectTeam img {
     transition: all 1s;
@@ -289,7 +297,7 @@ body{
     left: 0;
     right: 0;
     z-index:1;
-    background: rgba(15,220,149,0.5);
+    background: rgba(255,255,255,0.5);
     -webkit-transform: scale(0,0);
     -moz-transform: scale(0,0);
     -ms-transform: scale(0,0);
@@ -360,13 +368,16 @@ body{
     font-size: 1em;
     font-weight: 700;
     text-transform: uppercase;
+    color: #000000;
+    text-shadow: 1px 1px grey;
 }
 figcaption>a>.fa{
     font-size: 4vh;
     display: inline;
+    color: #000000;
 }
 figcaption>a>.fa:hover{
-    color: #000;
+    color: #1ea78d;
 }
 .fun{
     position: relative;
@@ -403,22 +414,19 @@ figcaption>a>.fa:hover{
 .contact .hello{
     font-weight: 700;
     font-size: 3vh;
+    padding-bottom: 5vh;
 }
 .contact-content{
     padding-top: 5vh;
 }
-.form-container{
-    padding-top: 5vh;
-}
 .contact #name, .contact #email, .contact #message {
     width: 100%;
-    border-bottom: 1px solid #757575;
-    border-top: none;
-    border-right: none;
-    border-left: none;
+    border-bottom: 1px solid #1ea78d;
+    border-top: 1px solid #1ea78d;
+    border-right: 1px solid #1ea78d;
+    border-left: 1px solid #1ea78d;
     border-radius: 2px;
 }
-
 .contact .btn-send i{
     margin-right: 10px;
     color: #32b0ee;
@@ -435,7 +443,6 @@ figcaption>a>.fa:hover{
     color: #0eb493;
 }
 .btn-send{
-    float: right;
     margin-top: 5vh;
 }
 .footer {
@@ -458,6 +465,9 @@ figcaption>a>.fa:hover{
 #footer-subscribe {
     background-color: #1ea78d;
     border: 1px solid #fff;
+}
+.footer-explore-link{
+    text-align: left;
 }
 .footer-explore-link>ul{
     padding-left: 0 !important;
@@ -493,8 +503,5 @@ figcaption>a>.fa:hover{
     .feature-content{
         text-align: center;
         margin-top: 10px;
-    }
-    .btn-send{
-        float: none;
     }
 }
